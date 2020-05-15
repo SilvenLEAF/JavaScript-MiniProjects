@@ -1,19 +1,75 @@
 const timerText = document.querySelector('.timer-text');
 
 
-dateVar = 15;
-
-
 
 const dayDivisor = 1000*60*60*24;
 const hrsDivisor = 1000*60*60;
 const minsDivisor = 1000*60;
 
-
 setInterval(()=>{
 
-     let targetDate= new Date(`May ${dateVar}, 2020 14:48:00`)
      let today = new Date();
+     let dateVar = today.getDate();
+     let monthVar = today.getMonth();
+     let month = '';
+
+     switch (monthVar) {
+          case 0:
+          month = 'January';
+               break;
+
+          case 1:
+          month = 'February';
+               break;
+
+          case 2:
+          month = 'March';
+               break;
+
+          case 3:
+          month = 'April';
+               break;
+
+          case 4:
+          month = 'May';
+               break;
+
+          case 5:
+          month = 'June';
+               break;
+
+          case 6:
+          month = 'July';
+               break;
+
+          case 7:
+          month = 'August';
+               break;
+
+          case 8:
+          month = 'September';
+               break;
+
+          case 9:
+          month = 'November';
+               break;
+
+          case 10:
+          month = 'November';
+               break;
+
+          case 11:
+          month = 'December';
+               break;
+
+          case 5:
+          month = 'June';
+               break;
+
+     }
+
+
+     let targetDate= new Date(`${month} ${dateVar}, 2020 23:59:59`)
 
      let diff = targetDate.getTime() - today.getTime();
 
@@ -33,9 +89,5 @@ setInterval(()=>{
      secs = (secs<10) ? `0${secs}` : secs;
 
      timerText.textContent = `${days}d ${hrs}h ${mins}m ${secs}s`;
-     console.log(mins)
 
-     if(secs <= 0){
-          dateVar ++;
-     }
 }, 1000);
