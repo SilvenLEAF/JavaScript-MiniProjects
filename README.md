@@ -1,2 +1,2 @@
-# JavaScript-MiniProjects
-A collection of JavaScript Mini-Projects
+# JavaScriptMiniProjects
+A collection of my JavaScript Mini-Projects
